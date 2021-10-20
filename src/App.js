@@ -9,7 +9,7 @@ export const ThemeContext = React.createContext();
 
 const api = {
   key: "7ec4c505607b4b73c0ba74beffef58ca",
-  base: "http://api.openweathermap.org/data/2.5/",
+  base: "https://api.openweathermap.org/data/2.5/",
 };
 
 function App() {
