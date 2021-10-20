@@ -1,0 +1,103 @@
+.toggler {
+  display: flex;
+  width: 120px;
+  align-items: center;
+  justify-content: space-around;
+
+  &__day-icon--light,
+  &__day-icon--dark,
+  &__night-icon--light,
+  &__night-icon--dark {
+    cursor: pointer;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    fill: #f9f0da;
+    @media (max-width: 410px) {
+      display: none;
+    }
+  }
+  &__night-icon--light,
+  &__night-icon--dark {
+    width: 23px;
+    height: 23px;
+    margin-bottom: 3px;
+    fill: #f9f0da;
+  }
+  &__day-icon--light,
+  &__night-icon--light {
+    fill: #919ca1;
+  }
+}
+
+.toggle--light,
+.toggle--dark {
+  display: none;
+}
+
+.toggle--light + .toggle-button,
+.toggle--dark + .toggle-button {
+  outline: 0;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid #333;
+  user-select: none;
+}
+
+.toggle--light + .toggle-button:after,
+.toggle--light + .toggle-button:before,
+.toggle--dark + .toggle-button:after,
+.toggle--dark + .toggle-button:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+
+.toggle--light + .toggle-button:after,
+.toggle--dark + .toggle-button:after {
+  left: 0;
+}
+
+.toggle--light + .toggle-button:before,
+.toggle--dark + .toggle-button:before {
+  display: none;
+}
+
+.toggle--light:checked + .toggle-button:after,
+.toggle--dark:checked + .toggle-button:after {
+  left: 50%;
+}
+
+.toggle--light + .toggle-button,
+.toggle--dark + .toggle-button {
+  padding: 2px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 2px solid #f9f0da;
+  border-radius: 2em;
+}
+.toggle--light + .toggle-button {
+  border: #919ca1 2px solid;
+}
+
+.toggle--light + .toggle-button:after,
+.toggle--dark + .toggle-button:after {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: #919ca1;
+  content: "";
+  border-radius: 1em;
+}
+.toggle--dark + .toggle-button:after {
+  background: #f9f0da;
+}
+
+.toggle--light:checked + .toggle-button:after,
+.toggle--dark:checked + .toggle-button:after {
+  left: 50%;
+}

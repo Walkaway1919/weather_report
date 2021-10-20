@@ -1,0 +1,15 @@
+@import "./reset.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.theme--light {
+  background-image: url("./assets/img/bgc.jpg");
+  color: black;
+}
+.theme--dark {
+  background-image: url("./assets/img/epic-grey-cloud-and-sky-texture-15-1560x923.jpeg");
+  color: #f9f0da;
+}
