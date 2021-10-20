@@ -1,5 +1,6 @@
 {
-  "name": "react-theory",
+  "name": "weather-report",
+  "homepage": "https://walkaway1919.github.io/weather_report/", 
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +23,9 @@
     "format": "npx prettier --write .",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
