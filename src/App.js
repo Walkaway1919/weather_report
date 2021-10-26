@@ -115,7 +115,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`theme--${theme}`}>
         <div className={"weather-app"}>
-          <Header setCity={setCity} search={search} city={city} />
+          <Header setCity={setCity} search={search} city={city} weather={weather}/>
           <TodayWeather
             className="weather-app__today"
             weather={weather}

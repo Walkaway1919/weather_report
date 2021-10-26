@@ -2,16 +2,16 @@ import cn from "classnames";
 import { Duration } from "../Duration/Duration";
 import { IconText } from "../IconText/IconText";
 import { Time } from "../Time/Time";
+import { ThemeContext } from "../../App";
+import { useContext } from "react";
 import "./TodayWeather.scss";
 export const TodayWeather = (props) => {
+  const { theme, setTheme } = useContext(ThemeContext);
   const { className, weather, format_date, msToTime } = props;
   return typeof weather.main !== "undefined" ? (
     <div className={cn(className, "today-weather")}>
-      <div className="today-weather__main">
+      <div className={theme === "light" ? "today-weather__main--light" : "today-weather__main--dark"}>
         <div className="today-weather__now weather-now">
-          <div className="today-weather__location">
-            {weather.name}, {weather.weather[0].description}
-          </div>
           <div className="temperature-box">
             <div className="weather-now__temp temperature">
               <img
@@ -21,9 +21,9 @@ export const TodayWeather = (props) => {
               <div className="temperature__text">
                 {Math.round(weather.main.temp)}°c
               </div>
-            </div>
             <div className="weather-now__feels">
-              ощущается как {Math.round(weather.main.feels_like)}°c
+              , ощущается как {Math.round(weather.main.feels_like)}°c
+            </div>
             </div>
           </div>
         </div>

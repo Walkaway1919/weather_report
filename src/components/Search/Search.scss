@@ -1,5 +1,5 @@
 .search {
-  width: auto;
+  width: 100%;
   float: right;
   margin-right: 30px;
   position: relative;
@@ -15,23 +15,23 @@
 
   &__bar--light,
   &__bar--dark {
+    position: absolute;
+    right: 0px;
+    top: -1px;
+    z-index: 10;
     font-size: 24px;
     padding-left: 20px;
-    width: 650px;
-    height: 60px;
+    width: 50%;
+    height: 40px;
     padding-left: 15px;
     border-radius: 40px;
     border: 1px solid transparent;
     box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
-    @media (max-width: 1000px) {
-      width: 400px;
+    @media (max-width: 1050px) {
+      position: relative;
     }
-    @media (max-width: 600px) {
-      width: 250px;
-      font-size: 20px;
-    }
-    @media (max-width: 376px) {
-      height: 35px;
+    @media (max-width: 1050px) {
+      width: 100%;
     }
 
     &:hover {
@@ -40,23 +40,16 @@
     background: #f9f0da;
 
     outline: none;
-    position: relative;
     transition: 0.3s linear;
     &::placeholder {
       padding-top: 20px;
-      font-size: 24px;
+      font-size: 18px;
+
     }
     &:focus {
-      width: 850px;
-      @media (max-width: 1000px) {
-        width: 500px;
-      }
-      @media (max-width: 600px) {
-        width: 300px;
-      }
-      @media (max-width: 500px) {
-        width: 250px;
-      }
+      
+      width: 100%;
+
 
       &::-webkit-input-placeholder {
         opacity: 0;
@@ -75,19 +68,15 @@
 
   &__button--light,
   &__button--dark {
-    width: 30px;
-    height: 30px;
+    z-index: 20;
+    width: 26px;
     background: none;
     border: none;
     position: absolute;
-    top: 16px;
-    right: 20px;
-    @media (max-width: 376px) {
-      top: 4px;
-      right: 5px;
-    }
+    top: 6px;
+    right: 8px;
     cursor: pointer;
-    fill: black;
+    fill: #919ca0;
   }
   &__button--dark {
     fill: #f9f0da;

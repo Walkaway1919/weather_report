@@ -1,14 +1,15 @@
 import { IconText } from "../IconText/IconText.jsx";
+import { ThemeContext } from "../../App";
+import { useContext } from "react";
 import "./Forecast.scss";
 export const Forecast = (props) => {
   const { daysArr } = props;
+  const { theme, setTheme } = useContext(ThemeContext);
   return (
-    <div className="forecast">
+    <div className={theme === "light" ? "forecast--light" : "forecast--dark"}>
       {daysArr.length > 0 ? (
         daysArr.map((oneDay) => {
           const thisDay = oneDay[0].dt_txt;
-          // today
-          // const averageCloudPerc = average(oneDay, 'clouds', 'all' );
           const description = oneDay
             .map((oneStamp) => oneStamp.weather[0].description)
             .reduce(function (result, desc) {
@@ -20,12 +21,6 @@ export const Forecast = (props) => {
               return result;
             }, {});
 
-          const descr = Object.keys(description).reduce((final, currDesc) => {
-            if (description[final] > description[currDesc]) {
-              return final;
-            }
-            return currDesc;
-          }, "");
 
           const averageCloudPerc =
             oneDay

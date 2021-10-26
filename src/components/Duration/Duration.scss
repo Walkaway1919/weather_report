@@ -1,10 +1,10 @@
-.length-day {
+.length-day--light, .length-day--dark{
   display: flex;
-  padding: 30px 50px;
+  padding: 20px 50px;
   height: 100%;
   width: 100%;
-  font-size: 26px;
-  background: rgba(0, 0, 0, 0.3);
+  font-size: 22px;
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   justify-content: space-between;
   @media (max-width: 375px) {
@@ -34,23 +34,25 @@
     padding: 0 0 20px;
     border-radius: 0 0 30px 30px;
   }
-  &__icon {
-    width: 90px;
-    @media (max-width: 860px) {
-      margin-right: 20px;
-    }
-    @media (max-width: 700px) {
-      margin-right: 0;
-    }
-    @media (max-width: 440px) {
-      width: 70px;
-    }
-    @media (max-width: 375px) {
-      width: 50px;
-    }
+
+  
+}
+.length-day__icon {
+  width: 70px;
+  @media (max-width: 860px) {
+    margin-right: 20px;
   }
-  &__sunrise,
-  &__sunset {
+  @media (max-width: 700px) {
+    margin-right: 0;
+  }
+  @media (max-width: 440px) {
+    width: 70px;
+  }
+  @media (max-width: 375px) {
+    width: 50px;
+  }
+}
+.length-day__sunrise, .length-day__sunset {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,9 +64,11 @@
       flex-direction: column;
     }
   }
-  &__sunrise {
+  .length-day__sunrise {
     @media (max-width: 860px) {
       margin-right: 30px;
     }
   }
-}
+  .length-day--dark{
+    background: rgba(0, 0, 0, 0.4);
+  }

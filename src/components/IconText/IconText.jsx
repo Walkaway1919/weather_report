@@ -1,16 +1,21 @@
 import cn from "classnames";
 import "./IconText.scss";
+import temp from './free-icon-temperature.png';
+import press from './pressure.png';
+import windy from './free-icon-windy.png';
+import humid from './free-icon-humidity.png';
+import cloudly from './free-icon-cloud.png';
 
 const iconMap = {
   temperature: (
-    <img className="icon-block__icon" src="free-icon-temperature.png" />
+    <img className="icon-block__icon" src={temp} />
   ),
   pressure: (
-    <img className="icon-block__icon" src="free-icon-low-tide-4064379.png" />
+    <img className="icon-block__icon arrow" src={press} />
   ),
-  wind: <img className="icon-block__icon" src="free-icon-windy.png" />,
-  cloud: <img className="icon-block__icon" src="free-icon-cloud.png" />,
-  humidity: <img className="icon-block__icon" src="free-icon-humidity.png" />,
+  wind: <img className="icon-block__icon" src={windy} />,
+  cloud: <img className="icon-block__icon" src={cloudly} />,
+  humidity: <img className="icon-block__icon" src={humid} />,
 };
 
 export const IconText = ({ className, size, text, icon }) => {

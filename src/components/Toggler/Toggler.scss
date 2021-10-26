@@ -1,33 +1,40 @@
 .toggler {
   display: flex;
-  width: 120px;
   align-items: center;
   justify-content: space-around;
-
-  &__day-icon--light,
-  &__day-icon--dark,
-  &__night-icon--light,
-  &__night-icon--dark {
-    cursor: pointer;
+  &__icon{
     position: relative;
-    width: 26px;
-    height: 26px;
-    fill: #f9f0da;
-    @media (max-width: 410px) {
-      display: none;
+    .icon-moon, .icon-sun{
+      cursor: pointer;
+      width: 26px;
+      height: 26px;
     }
+    .icon-moon{
+      fill: #f9f0da;
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      left: -1px;
+      @media (max-width: 650px) {
+        width: 20px;
+        height: 20px;
+        top: -1px;
+      }
+    }
+    .icon-sun{
+      fill:#fbd972;
+      position: absolute;
+      right: -3px;
+      @media (max-width: 650px) {
+        height: 23px;
+        width: 23px;
+        right: -6px;
+        top: -1px;
+      }
+    }
+
   }
-  &__night-icon--light,
-  &__night-icon--dark {
-    width: 23px;
-    height: 23px;
-    margin-bottom: 3px;
-    fill: #f9f0da;
-  }
-  &__day-icon--light,
-  &__night-icon--light {
-    fill: #919ca1;
-  }
+
 }
 
 .toggle--light,
@@ -45,6 +52,14 @@
   cursor: pointer;
   border: 2px solid #333;
   user-select: none;
+  background: #9eabb6;
+  @media (max-width: 650px) {
+    height: 25px;
+    width: 50px;
+  }
+}
+.toggle--dark + .toggle-button{
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .toggle--light + .toggle-button:after,
@@ -82,16 +97,15 @@
   border-radius: 2em;
 }
 .toggle--light + .toggle-button {
-  border: #919ca1 2px solid;
+  border: 2px solid #9eabb6;
 }
 
 .toggle--light + .toggle-button:after,
 .toggle--dark + .toggle-button:after {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  background: #919ca1;
   content: "";
-  border-radius: 1em;
+  height: 0px;
 }
 .toggle--dark + .toggle-button:after {
   background: #f9f0da;

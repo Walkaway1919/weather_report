@@ -19,7 +19,7 @@
     object-fit: contain;
     object-position: center center;
 
-    margin-right: 15px;
+    margin-right: 10px;
     @media (max-width: 1050px) {
       margin: 0 0 15px;
     }
@@ -31,6 +31,7 @@
   }
   &__text {
     font-size: 26px;
+    white-space: nowrap;
 
     @media (max-width: 860px) {
       margin-left: 10px;
@@ -57,6 +58,7 @@
     .icon-block__icon {
       width: 30px;
       height: 30px;
+      margin-right: 15px;
     }
     .icon-block__text {
       font-size: 20px;
@@ -65,4 +67,7 @@
       }
     }
   }
+}
+.arrow{
+  margin-right: 0;
 }
