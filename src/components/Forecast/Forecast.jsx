@@ -6,27 +6,15 @@ import "./Forecast.scss";
 export const Forecast = (props) => {
   const { daysArr } = props;
   const { theme } = useContext(ThemeContext);
-  return (
+  return daysArr.length > 0 && (
     <div className={cn(
       "forecast",
       {["forecast--light"]: theme === "light" },
       {["forecast--dark"]: theme !== "light" },
       )} >
-      {daysArr.length > 0 ? (
+        {
         daysArr.map((oneDay) => {
           const thisDay = oneDay[0].dt_txt;
-          const description = oneDay
-            .map((oneStamp) => oneStamp.weather[0].description)
-            .reduce(function (result, desc) {
-              if (result[desc]) {
-                result[desc] += 1;
-              } else {
-                result[desc] = 1;
-              }
-              return result;
-            }, {});
-
-
           const averageCloudPerc =
             oneDay
               .map((oneStamp) => oneStamp.clouds.all)
@@ -80,9 +68,7 @@ export const Forecast = (props) => {
             </div>
           );
         })
-      ) : (
-        <div className='error'>jj</div>
-      )}
+      }
     </div>
   );
 };

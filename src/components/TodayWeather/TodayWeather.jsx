@@ -57,14 +57,13 @@ export const TodayWeather = (props) => {
           />
         </div>
       </div>
-
       <div className="today-weather__secondary">
         <Time format_date={format_date} className="today-weather__time" />
         <Duration msToTime={msToTime} weather={weather} />
       </div>
     </div>
   ) : weather.message === "city not found" ? (
-    <div className="error">Такого города нет:(</div>
+    <div className="error">Такого города нет :(</div>
   ) : (
     <div className="start"></div>
   );
