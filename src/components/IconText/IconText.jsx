@@ -8,14 +8,14 @@ import cloudly from './free-icon-cloud.png';
 
 const iconMap = {
   temperature: (
-    <img className="icon-block__icon" src={temp} />
+    <img className="icon-block__icon" alt='temp' src={temp} />
   ),
   pressure: (
-    <img className="icon-block__icon arrow" src={press} />
+    <img className="icon-block__icon arrow" alt='pressure' src={press} />
   ),
-  wind: <img className="icon-block__icon" src={windy} />,
-  cloud: <img className="icon-block__icon" src={cloudly} />,
-  humidity: <img className="icon-block__icon" src={humid} />,
+  wind: <img className="icon-block__icon" alt='wind' src={windy} />,
+  cloud: <img className="icon-block__icon" alt='cloud' src={cloudly} />,
+  humidity: <img className="icon-block__icon" alt='humidity' src={humid} />,
 };
 
 export const IconText = ({ className, size, text, icon }) => {

@@ -9,11 +9,11 @@ export const Forecast = (props) => {
   return daysArr.length > 0 && (
     <div className={cn(
       "forecast",
-      {["forecast--light"]: theme === "light" },
-      {["forecast--dark"]: theme !== "light" },
+      {"forecast--light": theme === "light" },
+      {"forecast--dark": theme !== "light" },
       )} >
         {
-        daysArr.map((oneDay) => {
+        daysArr.map((oneDay, index) => {
           const thisDay = oneDay[0].dt_txt;
           const averageCloudPerc =
             oneDay
@@ -36,7 +36,7 @@ export const Forecast = (props) => {
               .map((oneStamp) => oneStamp.main.pressure)
               .reduce((a, b) => a + b, 0) / oneDay.length;
           return (
-            <div className="forecast-box">
+            <div key={index} className="forecast-box">
               <div className="forecast__date">
                 {thisDay.split(" ")[0].substr(5).replace("-", ".")}
               </div>

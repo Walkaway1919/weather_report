@@ -37,7 +37,7 @@ function App() {
     setCity( clearInput ? "" : searchCity);
   }
 
-  useEffect(async () => {
+  useEffect(() => {
     triggerSearch('Москва', true)
   }, []);
 

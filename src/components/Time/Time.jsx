@@ -15,7 +15,7 @@ const updateTime = (callback) => {
 
 export const Time = ({ className, format_date }) => {
   const [time, setTime] = useState("");
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme} = useContext(ThemeContext);
   useEffect(() => {
     updateTime(setTime);
     const interval = setInterval(() => {

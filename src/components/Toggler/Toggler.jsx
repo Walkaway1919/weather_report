@@ -1,5 +1,6 @@
 import { ThemeContext } from "../../App";
 import { useContext } from "react";
+import cn from 'classnames';
 import "./Toggler.scss";
 
 export const Toggler = () => {
@@ -12,8 +13,11 @@ export const Toggler = () => {
       <div className="button-con">
         <label htmlFor="toggle-theme" />
         <input
-          className="toggle"
-          className={theme === "light" ? "toggle--light" : "toggle--dark"}
+          className={cn(
+            "toggle",
+            {"toggle--light": theme === "light" },
+            {"toggle--dark": theme !== "light" },
+            )}
           id="toggle-theme"
           type="checkbox"
         />
@@ -40,8 +44,6 @@ export const Toggler = () => {
         </g>
       </svg>}</div>
 
-        
-      
         </label>
         <label htmlFor="toggle-theme" />
       </div>

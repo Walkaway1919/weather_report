@@ -16,6 +16,7 @@ export const TodayWeather = (props) => {
             <div className="weather-now__temp temperature">
               <img
                 className="temperature__icon"
+                alt='weather-icon'
                 src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
               />
               <div className="temperature__text">

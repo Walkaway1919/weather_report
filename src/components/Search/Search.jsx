@@ -41,7 +41,7 @@ const getCities = async (city) => {
 export const Search = (props) => { 
 
   const searchBox = useRef();
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const { setCity, city, triggerSearch } = props;
 
   const [suggestions, setSuggestions] = useState([])
