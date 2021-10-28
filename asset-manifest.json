@@ -1,21 +1,26 @@
 {
   "files": {
-    "main.css": "/weather_report/static/css/main.6541959d.chunk.css",
-    "main.js": "/weather_report/static/js/main.3ab4fc35.chunk.js",
-    "main.js.map": "/weather_report/static/js/main.3ab4fc35.chunk.js.map",
+    "main.css": "/weather_report/static/css/main.39b652aa.chunk.css",
+    "main.js": "/weather_report/static/js/main.73df22ea.chunk.js",
+    "main.js.map": "/weather_report/static/js/main.73df22ea.chunk.js.map",
     "runtime-main.js": "/weather_report/static/js/runtime-main.ebbeff7e.js",
     "runtime-main.js.map": "/weather_report/static/js/runtime-main.ebbeff7e.js.map",
-    "static/js/2.e0a47098.chunk.js": "/weather_report/static/js/2.e0a47098.chunk.js",
-    "static/js/2.e0a47098.chunk.js.map": "/weather_report/static/js/2.e0a47098.chunk.js.map",
+    "static/js/2.754043bb.chunk.js": "/weather_report/static/js/2.754043bb.chunk.js",
+    "static/js/2.754043bb.chunk.js.map": "/weather_report/static/js/2.754043bb.chunk.js.map",
     "index.html": "/weather_report/index.html",
-    "static/css/main.6541959d.chunk.css.map": "/weather_report/static/css/main.6541959d.chunk.css.map",
-    "static/js/2.e0a47098.chunk.js.LICENSE.txt": "/weather_report/static/js/2.e0a47098.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/weather_report/static/media/epic-grey-cloud-and-sky-texture-15-1560x923.c114ed2b.jpeg"
+    "static/css/main.39b652aa.chunk.css.map": "/weather_report/static/css/main.39b652aa.chunk.css.map",
+    "static/js/2.754043bb.chunk.js.LICENSE.txt": "/weather_report/static/js/2.754043bb.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/weather_report/static/media/epic-grey-cloud-and-sky-texture-15-1560x923.c114ed2b.jpeg",
+    "static/media/free-icon-cloud.4105fcaf.png": "/weather_report/static/media/free-icon-cloud.4105fcaf.png",
+    "static/media/free-icon-humidity.43992d74.png": "/weather_report/static/media/free-icon-humidity.43992d74.png",
+    "static/media/free-icon-sunrise.ea4f7161.png": "/weather_report/static/media/free-icon-sunrise.ea4f7161.png",
+    "static/media/free-icon-sunset.57eb66a4.png": "/weather_report/static/media/free-icon-sunset.57eb66a4.png",
+    "static/media/free-icon-temperature.9adf41dc.png": "/weather_report/static/media/free-icon-temperature.9adf41dc.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ebbeff7e.js",
-    "static/js/2.e0a47098.chunk.js",
-    "static/css/main.6541959d.chunk.css",
-    "static/js/main.3ab4fc35.chunk.js"
+    "static/js/2.754043bb.chunk.js",
+    "static/css/main.39b652aa.chunk.css",
+    "static/js/main.73df22ea.chunk.js"
   ]
 }
