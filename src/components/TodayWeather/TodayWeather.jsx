@@ -6,7 +6,7 @@ import { ThemeContext } from "../../App";
 import { useContext } from "react";
 import "./TodayWeather.scss";
 export const TodayWeather = (props) => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const { className, weather, format_date, msToTime } = props;
   return typeof weather.main !== "undefined" ? (
     <div className={cn(className, "today-weather")}>
@@ -64,7 +64,7 @@ export const TodayWeather = (props) => {
       </div>
     </div>
   ) : weather.message === "city not found" ? (
-    <div className="start">ошибка</div>
+    <div className="error">Такого города нет:(</div>
   ) : (
     <div className="start"></div>
   );

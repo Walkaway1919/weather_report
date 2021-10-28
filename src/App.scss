@@ -21,6 +21,9 @@
   }
   &__today {
     margin-top: 40px;
- 
+    @media (max-width: 860px) {
+      margin-top: 20px;
+    }
   }
+  
 }

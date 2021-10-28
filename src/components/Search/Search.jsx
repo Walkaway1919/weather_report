@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import "./Search.scss";
 import { ThemeContext } from "../../App";
 import { useContext } from "react";
@@ -40,6 +40,7 @@ const getCities = async (city) => {
 
 export const Search = (props) => { 
 
+  const searchBox = useRef();
   const { theme, setTheme } = useContext(ThemeContext);
   const { setCity, city, triggerSearch } = props;
 
@@ -69,10 +70,21 @@ export const Search = (props) => {
   const inputClasses = cn({
     "search__bar--light": theme === "light",
     "search__bar--dark": theme ==='dark',
-    'search__bar--sugg': suggestions.length > 0 
+    'search__bar--sugg': suggestions.length > 0 && showSuggestions,
   });
+
+  useEffect(() => {
+    const hideSuggestions = (e) => {
+      if( searchBox.current && !searchBox.current.contains( e.target ) ) {
+        setShowSuggestions(false)
+      }
+    }
+    document.addEventListener('click', hideSuggestions)
+    return () => document.removeEventListener('click', hideSuggestions)
+  }, [])
+
   return (
-      <div className="search">
+      <div className="search" ref={searchBox}>
         <input
           type="text"
           className={inputClasses}
@@ -82,9 +94,6 @@ export const Search = (props) => {
           onKeyPress={onClickSearch}
           onFocus={()=>{
             setShowSuggestions(true)
-          }}
-          onBlur={()=>{
-            setShowSuggestions(false)
           }}
         />
         <svg
@@ -102,7 +111,7 @@ export const Search = (props) => {
             id="XMLID_223_"
           />
         </svg>
-        {showSuggestions && <Suggestions suggestions={suggestions} triggerSearch={triggerSearch} setCity={setCity}/>}
+        {showSuggestions && <Suggestions suggestions={suggestions} setShowSuggestions={setShowSuggestions} triggerSearch={triggerSearch} setCity={setCity}/>}
         
       </div>
   );

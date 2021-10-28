@@ -1,4 +1,4 @@
-.forecast--light, .forecast--dark {
+.forecast{
   margin-top: 30px;
   width: 100%;
   display: grid;
@@ -8,7 +8,6 @@
   grid-row-gap: 0px;
   border-radius: 30px;
   padding: 30px;
-  background: rgba(0, 0, 0, 0.2);
   font-size: 20px;
   @media (max-width: 1050px) {
     grid-column-gap: 15px;
@@ -23,6 +22,9 @@
     grid-row-gap: 00px;
   }
 }
+.forecast--light{
+  background: rgba(0, 0, 0, 0.2);
+}
 .forecast--dark {
   background: rgba(0, 0, 0, 0.4);
 }
@@ -32,6 +34,7 @@
   text-decoration: underline;
   @media (max-width: 860px) {
     font-size: 22px;
+    margin-left: 10px;
   }
 
   @media (max-width: 600px) {

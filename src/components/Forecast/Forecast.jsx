@@ -1,12 +1,17 @@
 import { IconText } from "../IconText/IconText.jsx";
 import { ThemeContext } from "../../App";
+import cn from 'classnames';
 import { useContext } from "react";
 import "./Forecast.scss";
 export const Forecast = (props) => {
   const { daysArr } = props;
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className={theme === "light" ? "forecast--light" : "forecast--dark"}>
+    <div className={cn(
+      "forecast",
+      {["forecast--light"]: theme === "light" },
+      {["forecast--dark"]: theme !== "light" },
+      )} >
       {daysArr.length > 0 ? (
         daysArr.map((oneDay) => {
           const thisDay = oneDay[0].dt_txt;
@@ -76,7 +81,7 @@ export const Forecast = (props) => {
           );
         })
       ) : (
-        <div>сегодня без прогнозов</div>
+        <div className='error'>jj</div>
       )}
     </div>
   );
