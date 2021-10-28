@@ -2,14 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  &__icon{
+  &__icon {
     position: relative;
-    .icon-moon, .icon-sun{
+    .icon-moon,
+    .icon-sun {
       cursor: pointer;
       width: 26px;
       height: 26px;
     }
-    .icon-moon{
+    .icon-moon {
       fill: #f9f0da;
       position: absolute;
       width: 23px;
@@ -21,8 +22,8 @@
         top: -1px;
       }
     }
-    .icon-sun{
-      fill:#fbd972;
+    .icon-sun {
+      fill: #fbd972;
       position: absolute;
       right: -3px;
       @media (max-width: 650px) {
@@ -32,9 +33,7 @@
         top: -1px;
       }
     }
-
   }
-
 }
 
 .toggle--light,
@@ -58,7 +57,7 @@
     width: 50px;
   }
 }
-.toggle--dark + .toggle-button{
+.toggle--dark + .toggle-button {
   background: rgba(0, 0, 0, 0.2);
 }
 

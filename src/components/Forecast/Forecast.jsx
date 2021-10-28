@@ -1,19 +1,21 @@
 import { IconText } from "../IconText/IconText.jsx";
 import { ThemeContext } from "../../App";
-import cn from 'classnames';
+import cn from "classnames";
 import { useContext } from "react";
 import "./Forecast.scss";
 export const Forecast = (props) => {
   const { daysArr } = props;
   const { theme } = useContext(ThemeContext);
-  return daysArr.length > 0 && (
-    <div className={cn(
-      "forecast",
-      {"forecast--light": theme === "light" },
-      {"forecast--dark": theme !== "light" },
-      )} >
-        {
-        daysArr.map((oneDay, index) => {
+  return (
+    daysArr.length > 0 && (
+      <div
+        className={cn(
+          "forecast",
+          { "forecast--light": theme === "light" },
+          { "forecast--dark": theme !== "light" }
+        )}
+      >
+        {daysArr.map((oneDay, index) => {
           const thisDay = oneDay[0].dt_txt;
           const averageCloudPerc =
             oneDay
@@ -67,8 +69,8 @@ export const Forecast = (props) => {
               />
             </div>
           );
-        })
-      }
-    </div>
+        })}
+      </div>
+    )
   );
 };

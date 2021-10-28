@@ -10,21 +10,27 @@ export const TodayWeather = (props) => {
   const { className, weather, format_date, msToTime } = props;
   return typeof weather.main !== "undefined" ? (
     <div className={cn(className, "today-weather")}>
-      <div className={theme === "light" ? "today-weather__main--light" : "today-weather__main--dark"}>
+      <div
+        className={
+          theme === "light"
+            ? "today-weather__main--light"
+            : "today-weather__main--dark"
+        }
+      >
         <div className="today-weather__now weather-now">
           <div className="temperature-box">
             <div className="weather-now__temp temperature">
               <img
                 className="temperature__icon"
-                alt='weather-icon'
+                alt="weather-icon"
                 src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
               />
               <div className="temperature__text">
                 {Math.round(weather.main.temp)}°c
               </div>
-            <div className="weather-now__feels">
-              , ощущается как {Math.round(weather.main.feels_like)}°c
-            </div>
+              <div className="weather-now__feels">
+                , ощущается как {Math.round(weather.main.feels_like)}°c
+              </div>
             </div>
           </div>
         </div>

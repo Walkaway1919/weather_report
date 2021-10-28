@@ -41,10 +41,8 @@
     &::placeholder {
       padding-top: 20px;
       font-size: 18px;
-
     }
     &:focus {
-      
       width: 100%;
       &::-webkit-input-placeholder {
         opacity: 0;
@@ -77,6 +75,6 @@
     fill: #f9f0da;
   }
 }
-.search__bar--sugg{
+.search__bar--sugg {
   border-radius: 20px 20px 0 0;
 }

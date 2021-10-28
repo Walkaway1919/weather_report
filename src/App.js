@@ -20,9 +20,8 @@ const getWeatherData = async (cityName) => {
   );
   const jsonData = await res.json();
   const jsonDataForecast = await resForecast.json();
-  return [jsonData, jsonDataForecast]
-}
-
+  return [jsonData, jsonDataForecast];
+};
 
 function App() {
   const [city, setCity] = useState("");
@@ -31,14 +30,14 @@ function App() {
   const [theme, setTheme] = useState("light");
 
   const triggerSearch = async (searchCity, clearInput = false) => {
-    const [jsonData, jsonDataForecast] = await getWeatherData(searchCity)
+    const [jsonData, jsonDataForecast] = await getWeatherData(searchCity);
     setWeather(jsonData);
     setForecast(jsonDataForecast);
-    setCity( clearInput ? "" : searchCity);
-  }
+    setCity(clearInput ? "" : searchCity);
+  };
 
   useEffect(() => {
-    triggerSearch('Москва', true)
+    triggerSearch("Москва", true);
   }, []);
 
   const format_date = (d) => {
@@ -104,8 +103,13 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`theme--${theme}`}>
         <div className={"weather-app"}>
-          <Header setCity={setCity} city={city} weather={weather} triggerSearch={triggerSearch}/>
-          <Location weather={weather}/>
+          <Header
+            setCity={setCity}
+            city={city}
+            weather={weather}
+            triggerSearch={triggerSearch}
+          />
+          <Location weather={weather} />
           <TodayWeather
             className="weather-app__today"
             weather={weather}

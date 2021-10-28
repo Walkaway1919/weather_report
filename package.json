@@ -1,6 +1,6 @@
 {
   "name": "weather-report",
-  "homepage": "https://walkaway1919.github.io/weather_report/", 
+  "homepage": "https://walkaway1919.github.io/weather_report/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
