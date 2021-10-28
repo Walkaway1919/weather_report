@@ -15,16 +15,13 @@
 
   &__bar--light,
   &__bar--dark {
-    position: absolute;
-    right: 0px;
-    top: -1px;
-    z-index: 10;
+    position: relative;
     font-size: 24px;
     padding-left: 20px;
-    width: 50%;
+    width: 100%;
     height: 40px;
     padding-left: 15px;
-    border-radius: 40px;
+    border-radius: 30px;
     border: 1px solid transparent;
     box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
     @media (max-width: 1050px) {
@@ -49,8 +46,6 @@
     &:focus {
       
       width: 100%;
-
-
       &::-webkit-input-placeholder {
         opacity: 0;
         transition: all 0.5s;
@@ -59,7 +54,7 @@
     }
   }
   &__bar--dark {
-    background-color: #34353a;
+    background-color: rgb(55, 55, 55);
     color: #f9f0da;
     &::placeholder {
       color: #f9f0da;
@@ -81,4 +76,7 @@
   &__button--dark {
     fill: #f9f0da;
   }
+}
+.search__bar--sugg{
+  border-radius: 20px 20px 0 0;
 }

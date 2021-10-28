@@ -1,13 +1,11 @@
 import { Toggler } from "../Toggler/Toggler";
 import { Search } from "../Search/Search";
 import "./Header.scss";
-import { Location } from "../Location/Location";
 export const Header = (props) => {
-  const { setCity, search, city, weather } = props;
+  const { setCity, city, weather, triggerSearch } = props;
   return (
     <header>
-      <Location weather={weather}/>
-      <Search setCity={setCity} search={search} city={city} />
+      <Search setCity={setCity} city={city} triggerSearch={triggerSearch} />
       <Toggler />
     </header>
   );

@@ -9,8 +9,8 @@ export const Toggler = () => {
   return (
     <div className="toggler">
      
-      <div class="button-con">
-        <label for="toggle-theme" />
+      <div className="button-con">
+        <label htmlFor="toggle-theme" />
         <input
           className="toggle"
           className={theme === "light" ? "toggle--light" : "toggle--dark"}
@@ -19,7 +19,7 @@ export const Toggler = () => {
         />
         <label
           className="toggle-button"
-          for="toggle-theme"
+          htmlFor="toggle-theme"
           onClick={() => setTheme(changeTheme)}
         >
           <div className='toggler__icon'>{theme === "light" ? <svg className="icon-sun" viewBox="20 20 120 120" version="1.1"
@@ -31,7 +31,7 @@ export const Toggler = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
         ß
-        enable-background="new 0 0 512 512"
+        enableBackground="new 0 0 512 512"
       >
         <g>
           <g>
@@ -43,7 +43,7 @@ export const Toggler = () => {
         
       
         </label>
-        <label for="toggle-theme" />
+        <label htmlFor="toggle-theme" />
       </div>
       
     </div>
